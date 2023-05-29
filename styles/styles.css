@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  background-color: #ffe602;
+  justify-content: space-between;
+}
+header img {
+  height: 60px;
+  width: auto;
+  margin: 10px;
+}
+header nav,
+header ul {
+  display: flex;
+}
+header nav li,
+header ul li {
+  margin: 10px;
+  list-style: none;
+}
+header nav li a,
+header ul li a {
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+  font-size: 25px;
+  padding: 5px;
+  color: #000000;
+}
+header nav li a:hover,
+header ul li a:hover {
+  background-color: black;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.container {
+  background-image: url(../src/back-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .container-text {
+  max-width: 600px;
+  padding: 50px;
+}
+.container .container-text h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 70px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.container .container-text p {
+  font-family: "Kanit", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+}
+.container .container-text .btn-container {
+  margin: 10px;
+}
+.container .container-text .btn-container a {
+  padding: 5px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.skills h2 {
+  margin: 20px;
+  font-family: "Anton", sans-serif;
+  color: #000000;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 40px;
+}
+.skills .gallery-skills {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.skills .gallery-skills .skill .skill-icon img {
+  width: 200px;
+  height: 200px;
+  margin: 15% 15% 5% 15%;
+}
+.skills .gallery-skills .skill h3 {
+  font-family: "Anton", sans-serif;
+  font-size: 25px;
+}
+.skills .gallery-skills .skill p {
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+}
+
+footer {
+  background-color: #000000;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+footer .logo {
+  margin-right: 10px;
+}
+footer .logo img {
+  width: 100px;
+  height: auto;
+}
+footer .text {
+  flex: 1;
+}
+footer .text p {
+  color: #ffffff;
+  margin: 0;
+}
+footer .text p a {
+  color: #ffe602;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer .text p a:hover {
+  text-decoration: underline;
+}
+footer .gal-media {
+  display: flex;
+  justify-content: flex-start;
+}
+footer .gal-media .social {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+footer .gal-media .social:last-child {
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  footer .logo img {
+    width: 80px;
+  }
+  footer .gal-media {
+    margin-top: 10px;
+  }
+}/*# sourceMappingURL=styles.css.map */

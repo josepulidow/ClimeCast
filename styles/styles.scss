@@ -1,0 +1,205 @@
+$color-primary: #ffe602;
+$text-h: 'Anton',
+sans-serif;
+$text-p: 'Kanit',
+sans-serif;
+$main-color: #f2f2f2;
+$link-color: #000000;
+$link-hover-color: #666666;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    background-color: $color-primary;
+    justify-content: space-between;
+
+    img {
+        height: 60px;
+        width: auto;
+        margin: 10px;
+    }
+
+    nav,
+    ul {
+        display: flex;
+
+        li {
+            margin: 10px;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                font-family: $text-p;
+                font-size: 25px;
+                padding: 5px;
+                color: #000000;
+
+                &:hover {
+                    background-color: black;
+                    border-radius: 5px;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+
+.container {
+    background-image: url(../src/back-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container-text {
+        max-width: 600px;
+        padding: 50px;
+
+        h1 {
+            font-family: $text-h;
+            font-size: 70px;
+            color: #ffffff;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-family: $text-p;
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .btn-container {
+            margin: 10px;
+
+            a {
+                padding: 5px;
+                background-color: #000000;
+                color: #ffffff;
+                text-decoration: none;
+                font-family: $text-p;
+                font-size: 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.skills {
+
+    h2 {
+        margin: 20px;
+        font-family: $text-h;
+        color: #000000;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .gallery-skills {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+
+        .skill {
+
+            .skill-icon {
+                img {
+                    width: 200px;
+                    height: 200px;
+                    margin: 15% 15% 5% 15%;
+                }
+            }
+
+            h3 {
+                font-family: $text-h;
+                font-size: 25px;
+            }
+
+            p {
+                font-family: $text-p;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        margin-right: 10px;
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+    }
+
+    .text {
+        flex: 1;
+
+        p {
+            color: #ffffff;
+            margin: 0;
+
+            a {
+                color: $color-primary;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .gal-media {
+        display: flex;
+        justify-content: flex-start;
+
+        .social {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            margin-right: 0;
+            margin-bottom: 10px;
+
+            img {
+                width: 80px;
+            }
+        }
+
+        .gal-media {
+            margin-top: 10px;
+        }
+    }
+}
