@@ -8,36 +8,85 @@
 
 header {
   display: flex;
-  background-color: #ffe602;
+  align-items: center;
   justify-content: space-between;
+  padding: 32px;
+  background-color: #000000;
 }
-header img {
-  height: 60px;
-  width: auto;
-  margin: 10px;
+header .logo {
+  max-width: 200px;
 }
-header nav,
-header ul {
+header .nav-list {
+  list-style-type: none;
   display: flex;
+  gap: 16px;
 }
-header nav li,
-header ul li {
-  margin: 10px;
-  list-style: none;
-}
-header nav li a,
-header ul li a {
+header .nav-list li a {
   text-decoration: none;
+  color: #ffe602;
+  font-size: 20px;
   font-family: "Kanit", sans-serif;
-  font-size: 25px;
-  padding: 5px;
-  color: #000000;
 }
-header nav li a:hover,
-header ul li a:hover {
-  background-color: black;
-  border-radius: 5px;
-  color: #ffffff;
+header .nav-list li a:hover {
+  text-decoration: underline;
+}
+header .open-menu,
+header .close-menu {
+  display: none;
+}
+@media (max-width: 550px) {
+  header .open-menu,
+  header .close-menu {
+    display: block;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 32px;
+    border: none;
+  }
+  header .open-menu {
+    color: #ffffff;
+    transition: 0.5s;
+  }
+  header .open-menu:hover {
+    background-color: #494949;
+  }
+  header .close-menu {
+    color: #000000;
+    transition: 0.5s;
+  }
+  header .close-menu:hover {
+    background-color: #494949;
+    color: #fff;
+  }
+  header .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 32px;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  header .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  header .nav .nav-list {
+    flex-direction: column;
+    align-items: end;
+  }
+  header .nav .nav-list a {
+    color: #000000;
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+  }
 }
 
 .container {
@@ -61,7 +110,7 @@ header ul li a:hover {
   font-size: 24px;
 }
 .container .container-text .btn-container {
-  margin: 10px;
+  margin: 10px 0;
 }
 .container .container-text .btn-container a {
   padding: 5px;
@@ -73,6 +122,9 @@ header ul li a:hover {
   border-radius: 10px;
 }
 
+.skills {
+  margin: 50px 50px;
+}
 .skills h2 {
   margin: 20px;
   font-family: "Anton", sans-serif;
@@ -82,30 +134,104 @@ header ul li a:hover {
   font-size: 40px;
 }
 .skills .gallery-skills {
-  margin: 20px;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+.skills .gallery-skills .skill {
+  background-color: #b6faf7;
+}
 .skills .gallery-skills .skill .skill-icon img {
   width: 200px;
   height: 200px;
-  margin: 15% 15% 5% 15%;
+  margin: 15% 15% 5% 20%;
 }
 .skills .gallery-skills .skill h3 {
+  padding: 10px;
   font-family: "Anton", sans-serif;
   font-size: 25px;
 }
 .skills .gallery-skills .skill p {
+  text-align: center;
+  padding: 10px;
   font-family: "Kanit", sans-serif;
   font-size: 18px;
+}
+
+.about-me {
+  background-image: url(../src/back-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+}
+.about-me .container-text {
+  max-width: 600px;
+  padding: 50px;
+  text-align: right;
+}
+.about-me .container-text h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 70px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.about-me .container-text p {
+  font-family: "Kanit", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.ww-me {
+  margin: 50px 50px;
+}
+.ww-me .reason {
+  margin: 20px;
+}
+.ww-me .reason h2 {
+  font-family: "Anton", sans-serif;
+  text-align: center;
+}
+.ww-me .adventages {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.ww-me .adventages .adventage {
+  background-color: #fecffe;
+  padding: 20px;
+}
+.ww-me .adventages .adventage .adventage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ww-me .adventages .adventage .adventage-icon img {
+  width: 100px;
+  height: auto;
+  margin: 20px;
+}
+.ww-me .adventages .adventage .adventage-text h3 {
+  font-family: "Anton", sans-serif;
+}
+.ww-me .adventages .adventage .adventage-text p {
+  font-family: "Kanit", sans-serif;
+  text-align: center;
+  width: auto;
+}
+@media (max-width: 767px) {
+  .ww-me .adventages {
+    grid-template-columns: 1fr;
+  }
 }
 
 footer {
   background-color: #000000;
   padding: 20px;
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: "Kanit", sans-serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
