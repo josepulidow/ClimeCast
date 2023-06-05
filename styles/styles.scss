@@ -16,6 +16,13 @@ $link-hover-color: #666666;
     align-items: center;
 }
 
+body {
+    background-image: url(../src/bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+
 header {
     display: flex;
     align-items: center;
@@ -119,13 +126,12 @@ header {
 }
 
 .container {
-    background-image: url(../src/back-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 10% 0 10% 0;
 
     .container-text {
         max-width: 600px;
         padding: 50px;
+        margin: auto;
 
         h1 {
             font-family: $text-h;
@@ -136,28 +142,36 @@ header {
 
         p {
             font-family: $text-p;
-            color: #ffffff;
+            color: #b5b5b5;
             font-size: 24px;
+            text-align: center;
         }
 
         .btn-container {
-            margin: 10px 0;
+            margin: 20px auto;
+            width: 100px;
+            transition: 1s;
+            cursor: pointer;
 
             a {
                 padding: 5px;
-                background-color: #000000;
-                color: #ffffff;
+                background-color: $color-primary;
+                color: #000000;
                 text-decoration: none;
                 font-family: $text-p;
                 font-size: 20px;
                 border-radius: 10px;
+            }
+
+            &:hover {
+                transform: translateY(5px);
             }
         }
     }
 }
 
 .skills {
-    margin: 50px 50px;
+    margin: 0 20% 20% 20%;
 
     h2 {
         margin: 20px;
@@ -169,13 +183,13 @@ header {
     }
 
     .gallery-skills {
-        margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
 
         .skill {
-            background-color: #b6faf7;
+            background-color: rgba(255, 255, 255, 0.137);
+            transition: .5s;
 
             .skill-icon {
                 img {
@@ -186,16 +200,22 @@ header {
             }
 
             h3 {
+                color: $color-primary;
                 padding: 10px;
                 font-family: $text-h;
                 font-size: 25px;
             }
 
             p {
+                color: #b5b5b5;
                 text-align: center;
                 padding: 10px;
                 font-family: $text-p;
                 font-size: 18px;
+            }
+
+            &:hover {
+                transform: translateY(-12px);
             }
         }
     }
@@ -206,7 +226,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin: 0 0 20% 0;
 
     .container-text {
         max-width: 600px;
@@ -229,14 +250,16 @@ header {
 }
 
 .ww-me {
-    margin: 50px 50px;
+    margin: 0 15% 30% 15%;
 
     .reason {
         margin: 20px;
 
         h2 {
+            color: #ffffff;
             font-family: $text-h;
             text-align: center;
+            font-size: 40px;
         }
     }
 
@@ -248,7 +271,7 @@ header {
         gap: 20px;
 
         .adventage {
-            background-color: #fecffe;
+            background-color: rgba(255, 255, 255, 0.137);
             padding: 20px;
 
 
@@ -268,10 +291,12 @@ header {
 
             .adventage-text {
                 h3 {
+                    color: $color-primary;
                     font-family: $text-h;
                 }
 
                 p {
+                    color: #b5b5b5;
                     font-family: $text-p;
                     text-align: center;
                     width: auto;

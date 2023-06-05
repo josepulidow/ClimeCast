@@ -6,6 +6,14 @@
   align-items: center;
 }
 
+body {
+  background-image: url(../src/bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
 header {
   display: flex;
   align-items: center;
@@ -90,13 +98,12 @@ header .close-menu {
 }
 
 .container {
-  background-image: url(../src/back-img.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: 10% 0 10% 0;
 }
 .container .container-text {
   max-width: 600px;
   padding: 50px;
+  margin: auto;
 }
 .container .container-text h1 {
   font-family: "Anton", sans-serif;
@@ -106,24 +113,31 @@ header .close-menu {
 }
 .container .container-text p {
   font-family: "Kanit", sans-serif;
-  color: #ffffff;
+  color: #b5b5b5;
   font-size: 24px;
+  text-align: center;
 }
 .container .container-text .btn-container {
-  margin: 10px 0;
+  margin: 20px auto;
+  width: 100px;
+  transition: 1s;
+  cursor: pointer;
 }
 .container .container-text .btn-container a {
   padding: 5px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffe602;
+  color: #000000;
   text-decoration: none;
   font-family: "Kanit", sans-serif;
   font-size: 20px;
   border-radius: 10px;
 }
+.container .container-text .btn-container:hover {
+  transform: translateY(5px);
+}
 
 .skills {
-  margin: 50px 50px;
+  margin: 0 20% 20% 20%;
 }
 .skills h2 {
   margin: 20px;
@@ -134,13 +148,13 @@ header .close-menu {
   font-size: 40px;
 }
 .skills .gallery-skills {
-  margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 .skills .gallery-skills .skill {
-  background-color: #b6faf7;
+  background-color: rgba(255, 255, 255, 0.137);
+  transition: 0.5s;
 }
 .skills .gallery-skills .skill .skill-icon img {
   width: 200px;
@@ -148,15 +162,20 @@ header .close-menu {
   margin: 15% 15% 5% 20%;
 }
 .skills .gallery-skills .skill h3 {
+  color: #ffe602;
   padding: 10px;
   font-family: "Anton", sans-serif;
   font-size: 25px;
 }
 .skills .gallery-skills .skill p {
+  color: #b5b5b5;
   text-align: center;
   padding: 10px;
   font-family: "Kanit", sans-serif;
   font-size: 18px;
+}
+.skills .gallery-skills .skill:hover {
+  transform: translateY(-12px);
 }
 
 .about-me {
@@ -164,7 +183,8 @@ header .close-menu {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin: 0 0 20% 0;
 }
 .about-me .container-text {
   max-width: 600px;
@@ -184,14 +204,16 @@ header .close-menu {
 }
 
 .ww-me {
-  margin: 50px 50px;
+  margin: 0 15% 30% 15%;
 }
 .ww-me .reason {
   margin: 20px;
 }
 .ww-me .reason h2 {
+  color: #ffffff;
   font-family: "Anton", sans-serif;
   text-align: center;
+  font-size: 40px;
 }
 .ww-me .adventages {
   margin-top: 50px;
@@ -200,7 +222,7 @@ header .close-menu {
   gap: 20px;
 }
 .ww-me .adventages .adventage {
-  background-color: #fecffe;
+  background-color: rgba(255, 255, 255, 0.137);
   padding: 20px;
 }
 .ww-me .adventages .adventage .adventage-item {
@@ -214,9 +236,11 @@ header .close-menu {
   margin: 20px;
 }
 .ww-me .adventages .adventage .adventage-text h3 {
+  color: #ffe602;
   font-family: "Anton", sans-serif;
 }
 .ww-me .adventages .adventage .adventage-text p {
+  color: #b5b5b5;
   font-family: "Kanit", sans-serif;
   text-align: center;
   width: auto;
