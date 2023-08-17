@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #E0E0E0;
 }
 
 header {
@@ -15,7 +15,6 @@ header {
   justify-content: space-between;
 }
 header img {
-  width: 100px;
   height: 100px;
 }
 header nav {
@@ -46,7 +45,7 @@ header nav ul li a {
 .container {
   text-align: center;
   padding: 10px;
-  margin: auto;
+  margin: 50px 20px 0 20px;
 }
 .container h1 {
   color: #000000;
@@ -70,15 +69,24 @@ header nav ul li a {
   justify-content: space-between;
   flex-direction: column;
   gap: 15px;
+  margin-top: 3%;
+}
+.busqueda form img {
+  height: 180px;
+  width: 180px;
 }
 .busqueda form input {
   border: none;
   outline: none;
-  background-color: #E0E0E0;
+  background-color: #FFC107;
   color: #000000;
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
+  width: 300px;
+}
+.busqueda form input:hover {
+  background-color: #eccf79;
 }
 .busqueda form button {
   border: none;
@@ -89,4 +97,9 @@ header nav ul li a {
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.9s;
+}
+.busqueda form button:hover {
+  background-color: #8BC34A;
+  transform: translateY(10px);
 }/*# sourceMappingURL=styles.css.map */
